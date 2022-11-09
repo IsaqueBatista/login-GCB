@@ -31,13 +31,13 @@ export const ContainerItens = styled.div`
   }
 `
 
-export const H2 = styled.h1`
+export const H1 = styled.h1`
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 22px;
   color: rgb(66, 59, 50);
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 40px;
 `
 
 export const Button = styled.button`

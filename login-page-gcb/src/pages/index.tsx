@@ -22,7 +22,7 @@ export default function Home(props: HomeProps) {
     <>
       <S.Container>
         <S.ContainerItens>
-          <S.H2>Seja Bem Vindo ao Grupo GCB!</S.H2>
+          <S.H1>Seja Bem Vindo ao Grupo GCB!</S.H1>
           <S.P>
             <span>Name: </span>
             {props.name}
