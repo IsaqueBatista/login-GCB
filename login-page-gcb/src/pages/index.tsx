@@ -18,6 +18,7 @@ export default function Home(props: HomeProps) {
     keysToRemove.forEach((k) => localStorage.removeItem(k))
     router.push('/login')
   }
+
   return (
     <>
       <S.Container>

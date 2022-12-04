@@ -22,8 +22,6 @@ export const ContainerItens = styled.div`
   background: wheat;
   padding: 10px;
   width: 400px;
-
-  width: 100%;
   max-width: 480px;
   min-height: 480px;
   padding: 2.5rem 3rem;
@@ -31,7 +29,9 @@ export const ContainerItens = styled.div`
   background-color: #fff;
   box-shadow: 0 0.4rem 0.3rem rgba(0, 0, 0, 0.5);
 
-  img {
+  form {
+    display: flex;
+    flex-direction: column;
   }
 `
 export const H1 = styled.h1`
@@ -46,23 +46,27 @@ export const H1 = styled.h1`
 `
 
 export const Label = styled.p`
-  height: 23px;
-
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-
+  margin-top: 20px;
   color: #000000;
+
+  span {
+    color: red;
+    font-size: 13px;
+    /* display: block;
+    position: absolute; */
+  }
 `
 
 export const Input = styled.input`
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   background-color: wheat;
   background-color: white;
-  font-size: 1.85rem;
   font-weight: 400;
   border-top: none;
   border-right: none;
@@ -70,8 +74,8 @@ export const Input = styled.input`
   border-image: initial;
   border-bottom: none;
   border-bottom: 0.1rem solid rgb(66, 59, 50);
-  margin-bottom: 10px;
   outline: none;
+
   ::placeholder {
     font-size: small;
   }
@@ -84,7 +88,7 @@ export const Button = styled.button`
   font-size: 18px;
   font-weight: bold;
   border: none;
-  margin: 10px 0;
+  margin: 30px 0 10px;
   color: rgb(66, 59, 50);
 `
 

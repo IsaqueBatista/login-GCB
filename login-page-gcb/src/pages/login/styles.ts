@@ -73,6 +73,7 @@ export const Input = styled.input`
   border-bottom: 0.1rem solid rgb(66, 59, 50);
   margin-bottom: 10px;
   outline: none;
+  height: 3rem;
   ::placeholder {
     font-size: small;
   }
