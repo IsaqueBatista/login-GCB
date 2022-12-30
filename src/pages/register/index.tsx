@@ -62,17 +62,15 @@ export default function Register() {
     const usersList = JSON.parse(localStorage.getItem('usersList') || '[]')
 
     const user = {
-      name: name,
-      email: email,
-      password: password,
-      confirmPassword: password
+      name: data.name,
+      email: data.email,
+      password: data.password,
+      confirmPassword: data.confirmPassword
     }
 
     localStorage.setItem('usersList', JSON.stringify([...usersList, user]))
     // router.push('/login')
     return true
-
-    console.log(data)
   }
 
   return (
