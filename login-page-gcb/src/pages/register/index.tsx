@@ -46,7 +46,7 @@ export default function Register() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  // const [confirmPassword, setConfirmPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('password')
 
   const router = useRouter()
 
@@ -64,11 +64,12 @@ export default function Register() {
     const user = {
       name: name,
       email: email,
-      password: password
+      password: password,
+      confirmPassword: password
     }
 
     localStorage.setItem('usersList', JSON.stringify([...usersList, user]))
-    router.push('/login')
+    // router.push('/login')
     return true
 
     console.log(data)
