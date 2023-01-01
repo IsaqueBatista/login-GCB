@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import * as React from 'react'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 // import { toast } from 'react-toastify'
 
@@ -43,11 +43,6 @@ const schema = yup
   .required()
 
 export default function Register() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('password')
-
   const router = useRouter()
 
   const {
@@ -64,12 +59,12 @@ export default function Register() {
     const user = {
       name: data.name,
       email: data.email,
-      password: data.password,
-      confirmPassword: data.confirmPassword
+      password: btoa(data.password),
+      confirmPassword: btoa(data.password)
     }
 
     localStorage.setItem('usersList', JSON.stringify([...usersList, user]))
-    // router.push('/login')
+    router.push('/login')
     return true
   }
 

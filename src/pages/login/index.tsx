@@ -23,7 +23,7 @@ export default function Login() {
 
         <S.Button>Login</S.Button>
         <S.SignInLink>
-          Don't have an account yet? Register <a href="/register">Here</a>
+          Donʼt have an account yet? Register <a href="/register">Here</a>
         </S.SignInLink>
       </S.ContainerItens>
     </S.Container>
