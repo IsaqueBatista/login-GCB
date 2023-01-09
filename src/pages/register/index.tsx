@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 // import { toast } from 'react-toastify'
 
 import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import * as Yup from 'yup'
 
 import * as S from './styles'
 
@@ -16,17 +16,15 @@ interface IFormInputs {
   confirmPassword: string
 }
 
-const schema = yup
-  .object({
-    name: yup.string().required('O nome é obrigatório'),
+export default function Register() {
+  const schema = Yup.object({
+    name: Yup.string().required('O nome é obrigatório'),
 
-    email: yup
-      .string()
+    email: Yup.string()
       .email('Digite um email válido')
       .required('O email é obrigatório'),
 
-    password: yup
-      .string()
+    password: Yup.string()
       .required('A senha é obrigatória')
       .matches(
         /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
@@ -35,14 +33,11 @@ const schema = yup
           'número e caracter especial'
       ),
 
-    confirmPassword: yup
-      .string()
+    confirmPassword: Yup.string()
       .required('Confirmar a senha é obrigatório')
-      .oneOf([yup.ref('password'), null], 'As senhas precisam ser iguais.')
-  })
-  .required()
+      .oneOf([Yup.ref('password'), null], 'As senhas precisam ser iguais.')
+  }).required()
 
-export default function Register() {
   const router = useRouter()
 
   const {
@@ -59,8 +54,8 @@ export default function Register() {
     const user = {
       name: data.name,
       email: data.email,
-      password: btoa(data.password),
-      confirmPassword: btoa(data.password)
+      password: window.btoa(data.password),
+      confirmPassword: window.btoa(data.password)
     }
 
     localStorage.setItem('usersList', JSON.stringify([...usersList, user]))
@@ -80,7 +75,7 @@ export default function Register() {
         />
 
         <S.H1>Register</S.H1>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form noValidate onSubmit={handleSubmit(onSubmit)}>
           <S.Label>
             Name
             <S.Input

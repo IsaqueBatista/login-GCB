@@ -22,8 +22,6 @@ export const ContainerItens = styled.div`
   background: wheat;
   padding: 10px;
   width: 400px;
-
-  width: 100%;
   max-width: 480px;
   min-height: 480px;
   padding: 2.5rem 3rem;
@@ -31,14 +29,16 @@ export const ContainerItens = styled.div`
   background-color: #fff;
   box-shadow: 0 0.4rem 0.3rem rgba(0, 0, 0, 0.5);
 
-  img {
+  form {
+    display: flex;
+    flex-direction: column;
   }
 `
 export const H1 = styled.h1`
   height: 60px;
 
   font-style: normal;
-  font-weight: 700;
+  font-weight: 550;
   font-size: 35px;
   line-height: 60px;
   color: rgb(66, 59, 50);
@@ -46,24 +46,29 @@ export const H1 = styled.h1`
 `
 
 export const Label = styled.p`
-  width: 48px;
-  height: 23px;
-
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-
   color: #000000;
+  margin-bottom: 35px;
+
+  span {
+    color: red;
+    font-size: 13px;
+    display: block;
+    position: absolute;
+    width: 350px;
+    max-width: 450px;
+  }
 `
 
 export const Input = styled.input`
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   background-color: wheat;
   background-color: white;
-  font-size: 1.85rem;
   font-weight: 400;
   border-top: none;
   border-right: none;
@@ -71,9 +76,9 @@ export const Input = styled.input`
   border-image: initial;
   border-bottom: none;
   border-bottom: 0.1rem solid rgb(66, 59, 50);
-  margin-bottom: 10px;
+  /* margin-bottom: 20px; */
   outline: none;
-  height: 3rem;
+
   ::placeholder {
     font-size: small;
   }
@@ -89,11 +94,11 @@ export const Button = styled.button`
   margin: 10px 0;
 `
 
-export const SignInLink = styled.p`
-  margin-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  a {
-    color: rgb(249, 168, 38);
-  }
-`
+// export const SignInLink = styled.p`
+//   margin-top: 10px;
+//   text-align: center;
+//   font-size: 13px;
+//   a {
+//     color: rgb(249, 168, 38);
+//   }
+// `
